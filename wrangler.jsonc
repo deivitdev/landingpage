@@ -1,6 +1,7 @@
 {
     "name": "landingpage",
     "compatibility_date": "2025-05-28",
+    "main": "workers-site/index.js",
     "site": {
         "bucket": "."
     }
