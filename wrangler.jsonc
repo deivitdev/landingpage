@@ -1,5 +1,7 @@
 {
     "name": "landingpage",
     "compatibility_date": "2025-05-28",
-    "main": "/index.html"
+    "site": {
+        "bucket": "."
+    }
 }
