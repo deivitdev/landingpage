@@ -697,6 +697,11 @@ html {
     justify-content: center;
 }
 
+.featured-tech-grid {
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
 .tech-item {
     display: flex;
     flex-direction: column;
