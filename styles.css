@@ -123,6 +123,7 @@ body {
     gap: var(--spacing-unit);
     font-weight: 500;
     font-size: 18px;
+    margin-left: 16px;
 }
 
 .small-icon {
@@ -1271,24 +1272,261 @@ footer {
     color: var(--primary-color);
 }
 
+/* Current Job Card */
+.current-job-card {
+    background: var(--card-color);
+    border-radius: 12px;
+    box-shadow: var(--elevation-1);
+    padding: calc(var(--spacing-unit) * 2);
+    margin: calc(var(--spacing-unit) * 2) 0;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-normal);
+    border-left: 4px solid #FFE600; /* Color amarillo de Mercado Libre */
+}
+
+.current-job-card:hover {
+    box-shadow: var(--elevation-2);
+    transform: translateY(-2px);
+}
+
+.job-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-unit);
+    margin-bottom: var(--spacing-unit);
+    color: var(--text-primary);
+}
+
+.job-header i {
+    color: #FFE600; /* Color amarillo de Mercado Libre */
+    font-size: 20px;
+}
+
+.job-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.job-content {
+    padding: var(--spacing-unit) 0;
+}
+
+.company-info {
+    display: flex;
+    align-items: flex-start;
+    gap: calc(var(--spacing-unit) * 2);
+}
+
+.company-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #fff;
+    padding: 0;
+    box-shadow: var(--elevation-1);
+}
+
+.company-details {
+    flex: 1;
+}
+
+.company-details h4 {
+    margin: 0 0 6px 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.job-title {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin: 0 0 8px 0;
+}
+
+.job-description {
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
 /* Responsive Design */
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1024px) {
+    .section-content {
+        padding: calc(var(--spacing-unit) * 2);
+    }
+    
+    .action-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .dual-cards {
+        flex-direction: column;
+    }
+    
+    .mini-card {
+        width: 100%;
+        margin-bottom: var(--spacing-unit);
+    }
+}
+
+/* Tablets and Large Phones */
 @media (max-width: 768px) {
+    :root {
+        --spacing-unit: 10px;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+    
+    .status-bar {
+        padding: 8px;
+    }
+    
+    .status-bar .time {
+        font-size: 12px;
+    }
+    
+    .app-navbar {
+        padding: 8px 12px;
+    }
+    
     .nav-content {
         flex-direction: column;
-        gap: 1rem;
+        gap: 0.8rem;
     }
-
-    .nav-links {
+    
+    .side-nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .nav-link {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    
+    .profile-header {
         flex-direction: column;
-        gap: 1rem;
+        align-items: center;
+        text-align: center;
     }
-
-    .hero h1 {
-        font-size: 2.5rem;
+    
+    .profile-image {
+        margin-bottom: var(--spacing-unit);
     }
-
-    .about-content,
-    .contact-content {
+    
+    .profile-stats {
+        justify-content: center;
+    }
+    
+    .featured-card {
+        margin: calc(var(--spacing-unit) * 2) 0;
+    }
+    
+    .action-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    /* Tech stack adjustments */
+    .tech-grid {
+        justify-content: center;
+    }
+    
+    .tech-item {
+        margin: 8px;
+    }
+    
+    /* Settings and app items adjustments */
+    .settings-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: calc(var(--spacing-unit) * 1.5);
+    }
+    
+    .setting-icon {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+    
+    .app-item {
+        flex-direction: column;
+    }
+    
+    .app-icon-container {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .app-details {
+        width: 100%;
+    }
+    
+    /* Contact methods adjustments */
+    .contact-methods {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    :root {
+        --spacing-unit: 8px;
+    }
+    
+    .content-section {
+        padding: 10px;
+    }
+    
+    .section-content {
+        padding: var(--spacing-unit);
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
+    
+    .profile-stats {
+        flex-wrap: wrap;
+    }
+    
+    .stat-item {
+        width: 45%;
+        margin-bottom: 10px;
+    }
+    
+    .card-badges {
+        flex-wrap: wrap;
+    }
+    
+    .badge {
+        margin-bottom: 5px;
+    }
+    
+    .contact-profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact-details {
+        margin-top: 10px;
     }
 }
